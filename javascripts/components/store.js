@@ -1,5 +1,6 @@
 const store = () => {
-    console.log('this is the store')
+    let book = 'This is a book';
+    return book;
 }
 
 export {store}
