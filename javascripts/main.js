@@ -1,8 +1,5 @@
-import {store} from './components/store.js'
+import {bookCard} from './components/store.js'
 import {printToDom} from './helpers/util.js'
+import {book} from './components/store.js'
 
-console.log('main.js is connected');
-
-store();
-
-printToDom(store(),'book');
+bookCard();
