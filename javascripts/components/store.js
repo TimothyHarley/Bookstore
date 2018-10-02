@@ -3,20 +3,24 @@ import {printToDom} from '../helpers/util.js'
 
 let book = {
     Title: 'The Name of the Wind',
-    Image: "<img src='../NotW.jpg'>",
-    Price: '$39.99',
-    Button: "<button>Buy Now</button>"
+    Image: '../NotW.jpg',
+    Price: 39.99,
+    Button: "<h2>Buy Now</h2>"
 };
 
 
 
 const bookCard = () => {
-    let newString = '';
-    newString +=`<h3>${book.Title}<h3>`
-    newString +=`<h3>${book.Image}<h3>`
-    newString +=`<h3>${book.Price}<h3>`
-    newString +=`<h3>${book.Button}<h3>`
-        
+    let newString = 
+        `<div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="${book.Image}" alt="Card image cap">
+            <div class="card-body">
+                <h1 class="card-title">${book.Title}</h1>
+                <p class="card-text">$${book.Price}</p>
+                <a href="#" class="btn btn-primary">${book.Button}</a>
+            </div>
+        </div>`;
+    
     printToDom(newString, 'book');
 }
 
